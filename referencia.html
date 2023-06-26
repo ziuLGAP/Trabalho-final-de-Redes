@@ -1,0 +1,152 @@
+<html>
+    <head>
+        <title>SigFox</title>
+        <link href="css/style.css" rel="stylesheet"/>
+        <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <i class="bx bx-menu menu-icon"></i>
+                <a href="index.html" class="logo-name">SigFox</a>
+            </div>
+            <div class="sidebar">
+                <div class="logo">
+                    <i class="bx bx-menu menu-icon"></i>
+                    <a href="index.html" class="logo-name">SigFox</a>
+                </div>
+                <div class="sidebar-content">
+                    <ul class="lists">
+                        <li class="list">
+                            <a href="index.html" class="nav-link">
+                                <i class='bx bx-home home-icon'></i>
+                                <span class="link">⠀Página Inicial</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="intro.html" class="nav-link">
+                                <span class="link">1 - Introdução</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="arquitetura.html" class="nav-link">
+                                <span class="link">2 - Arquitetura do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="caracteristicas.html" class="nav-link">
+                                <span class="link">3 - Características técnicas do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="aplicacao.html" class="nav-link">
+                                <span class="link">4 - Aplicações do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="desafios.html" class="nav-link">
+                                <span class="link">5 - Desafios e considerações na implementação do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="conclusao.html" class="nav-link">
+                                <span class="link">6 - Conclusão</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="referencia.html" class="nav-link">
+                                <i class='bx bxs-book'></i>
+                                <span class="link">Referências</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <section class="overlay"></section>
+    <script>
+        const navBar = document.querySelector('nav'),
+        menuBtns = document.querySelectorAll('.menu-icon'),
+        overlay = document.querySelector('.overlay');
+        
+        menuBtns.forEach(menuBtn => {
+            menuBtn.addEventListener('click', () => {
+                navBar.classList.toggle('open');
+            });
+        });
+        overlay.addEventListener('click', () => {
+            navBar.classList.remove('open');
+        });
+    </script>
+    <div class="main">
+        <div class="one">
+            <h3>Referências</h3>
+            <div class="ref">
+                <ul>
+                <li>
+                    <i class='bx bx-right-arrow-alt'></i>
+                    <a href="https://powunity.com/en/sigfox-lora-independent-radio-networks-for-data-exchange" target="_blank">Sigfox, LoRa - Independent radio networks for data exchange? That's what's behind it!</a>
+                </li>
+                <li>
+                    <i class='bx bx-right-arrow-alt'></i>
+                    <a href="https://www.researchgate.net/publication/356039458_Packet_Fragmentation_over_Sigfox_Implementation_and_Performance_Evaluation_of_SCHC_ACK-on-Error" target="_blank">Packet Fragmentation Over Sigfox: Implementation and Performance Evaluation of SCHC ACK-on-Error</a>
+                </li>
+                <li>
+                    <i class='bx bx-right-arrow-alt'></i>
+                    <a href="https://docs.aws.amazon.com/pt_br/iot/latest/developerguide/aws-iot-how-it-works.html" target="_blank">Como o AWS IoT funciona</a>
+                </li>
+                <li>
+                    <i class='bx bx-right-arrow-alt'></i>
+                    <a href="https://build.sigfox.com/sigfox-device-radio-specifications" target="_blank"> SigFox Specifications, Ref.: EP-SPECS Rev.: 1.3 Date: Feb. 2019</a>
+                </li>
+                <li>
+                    <i class='bx bx-right-arrow-alt'></i>
+                    <a href="https://ssrn.com/abstract=3636656" target="_blank">Kalyan, Mr. and Reddy, Varshith and Jitesh, Kota and Ashif, Shaikh and CV, Ravi Kumar and B,
+                        Kalapraveen, LPWAN Technologies for IoT Deployment (June 27, 2020). International Journal of
+                        Electrical Engineering and Technology, 11(3), 2020, pp. 285-296</a>
+                </li>
+                <li>
+                    <i class='bx bx-right-arrow-alt'></i>
+                    <a href="https://ieeexplore.ieee.org/document/9172022" target="_blank">A. A. F. Purnama and M. I. Nashiruddin, "SigFox-based Internet of Things Network Planning for
+                        Advanced Metering Infrastructure Services in Urban Scenario," 2020 IEEE International Conference
+                        on Industry 4.0, Artificial Intelligence, and Communications Technology (IAICT), Bali, Indonesia, 2020, pp. 15-20, doi: 10.1109/IAICT50021.2020.9172022.</a>
+                </li>
+                <li>
+                    <i class='bx bx-right-arrow-alt'></i>
+                    <a href="https://ieeexplore.ieee.org/document/8480255" target="_blank">K. Mekki, E. Bajic, F. Chaxel and F. Meyer, "Overview of Cellular LPWAN Technologies
+                        for IoT Deployment: Sigfox, LoRaWAN, and NB-IoT," 2018 IEEE International Conference on
+                        Pervasive Computing and Communications Workshops (PerCom Workshops), Athens,
+                        Greece, 2018, pp. 197-202, doi: 10.1109/PERCOMW.2018.8480255</a>
+                </li>
+                <li>
+                    <i class='bx bx-right-arrow-alt'></i>
+                    <a href="https://ieeexplore.ieee.org/document/9043727" target="_blank">A. Lavric, A. I. Petrariu and V. Popa, "SigFox Communication Protocol: The New Era of IoT?,"
+                        2019 International Conference on Sensing and Instrumentation in IoT Era (ISSI), Lisbon, Portugal,
+                        2019, pp. 1-4, 10.1109/ISSI47111.2019.9043727.</a>
+                </li>
+                <li>
+                    <i class='bx bx-right-arrow-alt'></i>
+                    <a href="https://ieeexplore.ieee.org/document/8108501" target="_blank"> D. Patel and M. Won, "Experimental Study on Low Power Wide Area Networks (LPWAN) for
+                        Mobile Internet of Things," 2017 IEEE 85th Vehicular Technology Conference (VTC Spring), Sydney,
+                        NSW, Australia, 2017, pp. 1-5, doi: 10.1109/VTCSpring.2017.8108501.</a>
+                </li>
+                <li>
+                    <i class='bx bx-right-arrow-alt'></i>
+                    <a href="https://ieeexplore.ieee.org/document/8108182" target="_blank">M. Lauridsen, H. Nguyen, B. Vejlgaard, I. Z. Kovacs, P. Mogensen and M. Sorensen, "Coverage
+                        Comparison of GPRS, NB-IoT, LoRa, and SigFox in a 7800 km² Area," 2017 IEEE 85th Vehicular
+                        Technology Conference (VTC Spring), Sydney, NSW, Australia, 2017, pp. 1-5, doi: 10.1109/VTCSpring.2017.8108182.</a>
+                </li>
+                <li>
+                    <i class='bx bx-right-arrow-alt'></i>
+                    <a href="https://ieeexplore.ieee.org/document/8515816" target="_blank"> N. I. Osman and E. B. Abbas, "Simulation and Modelling of LoRa and Sigfox Low Power Wide
+                        Area Network Technologies," 2018 International Conference on Computer, Control, Electrical, and
+                        Electronics Engineering (ICCCEEE), Khartoum, Sudan, 2018, pp. 1-5, doi:
+                        10.1109/ICCCEEE.2018.8515816.</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    </body>

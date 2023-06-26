@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>SigFox</title>
+        <link href="css/style.css" rel="stylesheet"/>
+        <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <i class="bx bx-menu menu-icon"></i>
+                <a href="index.html" class="logo-name">SigFox</a>
+            </div>
+            <div class="sidebar">
+                <div class="logo">
+                    <i class="bx bx-menu menu-icon"></i>
+                    <a href="index.html" class="logo-name">SigFox</a>
+                </div>
+                <div class="sidebar-content">
+                    <ul class="lists">
+                        <li class="list">
+                            <a href="index.html" class="nav-link">
+                                <i class='bx bx-home home-icon'></i>
+                                <span class="link">⠀Página Inicial</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="intro.html" class="nav-link">
+                                <span class="link">1 - Introdução</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="arquitetura.html" class="nav-link">
+                                <span class="link">2 - Arquitetura do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="caracteristicas.html" class="nav-link">
+                                <span class="link">3 - Características técnicas do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="aplicacao.html" class="nav-link">
+                                <span class="link">4 - Aplicações do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="desafios.html" class="nav-link">
+                                <span class="link">5 - Desafios e considerações na implementação do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="conclusao.html" class="nav-link">
+                                <span class="link">6 - Conclusão</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="referencia.html" class="nav-link">
+                                <i class='bx bxs-book'></i>
+                                <span class="link">Referências</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <section class="overlay"></section>
+    <script>
+        const navBar = document.querySelector('nav'),
+        menuBtns = document.querySelectorAll('.menu-icon'),
+        overlay = document.querySelector('.overlay');
+        
+        menuBtns.forEach(menuBtn => {
+            menuBtn.addEventListener('click', () => {
+                navBar.classList.toggle('open');
+            });
+        });
+        overlay.addEventListener('click', () => {
+            navBar.classList.remove('open');
+        });
+    </script>
+    <div class="main">
+        <div class="one">
+            <h2>1. Introdução:</h2>
+            <h3>1.1 Internet das Coisas (IoT)</h3>
+            <p>⠀⠀⠀⠀A Internet das Coisas (IoT) é a interconexão de dispositivos físicos à Internet, permitindo que eles coletem, transmitam e troquem dados entre si e com outros sistemas. Essa tecnologia conecta objetos do mundo real, como eletrodomésticos, veículos e sensores industriais, transformando-os em "coisas inteligentes" capazes de interagir e tomar decisões com base nos dados coletados. A IoT oferece benefícios como automação, eficiência e comodidade em diversos setores, mas também traz preocupações sobre segurança e privacidade dos dados. No geral, a IoT desempenha um papel fundamental na transformação digital em diversos setores, como agricultura, saúde, indústria e cidades inteligentes. Ela oferece a oportunidade de melhorar a eficiência, otimizar processos e criar novos serviços e experiências para as pessoas.</p>
+            <div class="imagem">
+                <img src="assets/iot-universe.png", width="95%", title="Site de onde foi tirado a imagem" alt="Imagem que representa o funcionamento de forma simples do IoT">
+                <p>Figura 1: Funcionamento simples do IoT <br>
+                <a href="https://docs.aws.amazon.com/pt_br/iot/latest/developerguide/aws-iot-how-it-works.html" target="_blank">Referência</a>
+            </p>
+            </div>
+        </div>
+        <div class="one">
+            <h3>1.2 Necessidade de tecnologias de comunicação eficientes</h3>
+            <p>⠀⠀⠀⠀Com o crescimento exponencial do número de dispositivos conectados à IoT, surge a necessidade de tecnologias de comunicação eficientes. Essas tecnologias devem ser capazes de lidar com um grande volume de dados, garantir a confiabilidade das comunicações e serem economicamente viáveis. Além disso, considerando que muitos dispositivos IoT são alimentados por baterias ou têm restrições energéticas, é fundamental que as tecnologias de comunicação sejam de baixo consumo de energia.</p>
+        </div>
+        <div class="one">
+            <h3>1.3 Sigfox como solução de conectividade IoT de baixo consumo de energia</h3>
+<p>⠀⠀⠀⠀Nesse contexto, o Sigfox se destaca como uma solução de conectividade IoT que atende aos requisitos de baixo consumo de energia e eficiência na transmissão de dados. O Sigfox é uma rede global dedicada à IoT, que utiliza uma tecnologia de comunicação LPWAN (Low Power Wide Area Network). Sua arquitetura e protocolo foram projetados especificamente para permitir a conectividade de dispositivos IoT com consumo mínimo de energia e cobertura em áreas amplas.</p>
+
+<p>⠀⠀⠀⠀Ao contrário de tecnologias tradicionais, como Wi-Fi ou 3G/4G, que exigem maior consumo de energia e infraestrutura mais complexa, o Sigfox é capaz de transmitir pequenas quantidades de dados em longas distâncias, consumindo pouca energia. Isso torna o Sigfox ideal para dispositivos IoT de baixa potência que precisam operar por longos períodos sem necessidade frequente de recarga ou substituição de baterias.</p>
+<div class="imagem">
+    <img src="assets/lpwan-sigfox-lora-compared.jpg" alt="Comparação Sigfox com outras redes">
+    <p>
+        Figura 2: Comparação entre Sigfox e outras redes LPWAN <br>
+        <a href="https://powunity.com/en/sigfox-lora-independent-radio-networks-for-data-exchange" target="_blank">Referência</a>
+    </p>
+</div>
+<p>⠀⠀⠀⠀Além disso, o Sigfox oferece cobertura global, permitindo que dispositivos IoT se comuniquem em diferentes partes do mundo sem a necessidade de contratos de roaming ou configurações complexas. Sua arquitetura simplificada e protocolo eficiente também resultam em custos reduzidos de implantação e operação, tornando-o uma opção acessível para a conectividade IoT em larga escala.</p>
+        </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <title>SigFox</title>
+        <link href="css/style.css" rel="stylesheet"/>
+        <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <i class="bx bx-menu menu-icon"></i>
+                <a href="index.html" class="logo-name">SigFox</a>
+            </div>
+            <div class="sidebar">
+                <div class="logo">
+                    <i class="bx bx-menu menu-icon"></i>
+                    <a href="index.html" class="logo-name">SigFox</a>
+                </div>
+                <div class="sidebar-content">
+                    <ul class="lists">
+                        <li class="list">
+                            <a href="index.html" class="nav-link">
+                                <i class='bx bx-home home-icon'></i>
+                                <span class="link">⠀Página Inicial</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="intro.html" class="nav-link">
+                                <span class="link">1 - Introdução</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="arquitetura.html" class="nav-link">
+                                <span class="link">2 - Arquitetura do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="caracteristicas.html" class="nav-link">
+                                <span class="link">3 - Características técnicas do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="aplicacao.html" class="nav-link">
+                                <span class="link">4 - Aplicações do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="desafios.html" class="nav-link">
+                                <span class="link">5 - Desafios e considerações na implementação do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="conclusao.html" class="nav-link">
+                                <span class="link">6 - Conclusão</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="referencia.html" class="nav-link">
+                                <i class='bx bxs-book'></i>
+                                <span class="link">Referências</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <section class="overlay"></section>
+    <script>
+        const navBar = document.querySelector('nav'),
+        menuBtns = document.querySelectorAll('.menu-icon'),
+        overlay = document.querySelector('.overlay');
+        
+        menuBtns.forEach(menuBtn => {
+            menuBtn.addEventListener('click', () => {
+                navBar.classList.toggle('open');
+            });
+        });
+        overlay.addEventListener('click', () => {
+            navBar.classList.remove('open');
+        });
+    </script>
+    <div class="main">
+        <div class="one">
+            <h2>4. Aplicações do Sigfox:</h2>
+
+            <h3>4.1 Monitoramento Ambiental</h3>
+            <p>⠀⠀⠀⠀O Sigfox é amplamente utilizado para monitorar e coletar dados ambientais. Sensores conectados ao Sigfox podem medir a qualidade do ar, níveis de poluição, condições climáticas, qualidade da água e muito mais. Essas informações são essenciais para a tomada de decisões informadas em relação à saúde pública, conservação ambiental e monitoramento de riscos.</p>
+            
+        </div>
+        <div class="one">
+            <h3>4.2 Logística e Rastreamento</h3>
+            <p>⠀⠀⠀⠀O Sigfox é uma solução eficiente para rastreamento e monitoramento de ativos em tempo real. Com a conectividade do Sigfox, é possível rastrear a localização e o status de veículos, contêineres, paletes e outros objetos de valor. Isso melhora a eficiência na cadeia de suprimentos, ajuda a prevenir roubos e extravios e permite uma gestão mais precisa de inventário.</p>
+        </div>
+        <div class="one">
+            <h3>4.3 Saúde e Bem-Estar</h3>
+            <p>⠀⠀⠀⠀O Sigfox tem aplicações significativas no setor de saúde, permitindo o monitoramento remoto de pacientes, dispositivos de rastreamento de idosos e acompanhamento de condições crônicas. Com sensores conectados ao Sigfox, é possível coletar dados vitais, como frequência cardíaca, pressão arterial e níveis de glicose, transmitindo essas informações em tempo real para os profissionais de saúde.</p>
+        </div>
+        <div class="one">
+            <h3>4.4 Cidades Inteligentes</h3>
+            <p>⠀⠀⠀⠀O Sigfox desempenha um papel importante no desenvolvimento de cidades inteligentes. Sensores conectados ao Sigfox podem coletar dados sobre tráfego, estacionamento, iluminação pública, qualidade do ar e outros aspectos urbanos. Essas informações são utilizadas para otimizar o gerenciamento de recursos, melhorar a eficiência energética e a mobilidade urbana, bem como para aprimorar a qualidade de vida dos cidadãos.</p>
+            
+            <p>⠀⠀⠀⠀Essas são apenas algumas das muitas aplicações do Sigfox. Com sua cobertura global, baixo consumo de energia e custo acessível, o Sigfox tem o potencial de revolucionar diversos setores e impulsionar a adoção em larga escala da IoT.</p>
+        </div>
+    </div>
+    </body>
+</html>

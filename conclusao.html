@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>SigFox</title>
+        <link href="css/style.css" rel="stylesheet"/>
+        <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <i class="bx bx-menu menu-icon"></i>
+                <a href="index.html" class="logo-name">SigFox</a>
+            </div>
+            <div class="sidebar">
+                <div class="logo">
+                    <i class="bx bx-menu menu-icon"></i>
+                    <a href="index.html" class="logo-name">SigFox</a>
+                </div>
+                <div class="sidebar-content">
+                    <ul class="lists">
+                        <li class="list">
+                            <a href="index.html" class="nav-link">
+                                <i class='bx bx-home home-icon'></i>
+                                <span class="link">⠀Página Inicial</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="intro.html" class="nav-link">
+                                <span class="link">1 - Introdução</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="arquitetura.html" class="nav-link">
+                                <span class="link">2 - Arquitetura do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="caracteristicas.html" class="nav-link">
+                                <span class="link">3 - Características técnicas do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="aplicacao.html" class="nav-link">
+                                <span class="link">4 - Aplicações do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="desafios.html" class="nav-link">
+                                <span class="link">5 - Desafios e considerações na implementação do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="conclusao.html" class="nav-link">
+                                <span class="link">6 - Conclusão</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="referencia.html" class="nav-link">
+                                <i class='bx bxs-book'></i>
+                                <span class="link">Referências</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <section class="overlay"></section>
+    <script>
+        const navBar = document.querySelector('nav'),
+        menuBtns = document.querySelectorAll('.menu-icon'),
+        overlay = document.querySelector('.overlay');
+        
+        menuBtns.forEach(menuBtn => {
+            menuBtn.addEventListener('click', () => {
+                navBar.classList.toggle('open');
+            });
+        });
+        overlay.addEventListener('click', () => {
+            navBar.classList.remove('open');
+        });
+    </script>
+    <div class="main">
+        <div class="one">
+            <h2>6. Conclusão:</h2>
+
+            <p>⠀⠀⠀⠀O Sigfox é uma solução de conectividade IoT eficiente, com cobertura global, baixo consumo de energia e protocolo otimizado. Ao fornecer uma rede dedicada para dispositivos IoT, o Sigfox permite a comunicação de dados de forma econômica e confiável, abrindo portas para inúmeras aplicações e oportunidades.</p>
+            
+            <p>⠀⠀⠀⠀Através da rede Sigfox, dispositivos IoT podem transmitir informações valiosas para a nuvem, onde os dados podem ser armazenados, analisados e integrados a outros sistemas. Essa capacidade de processamento de dados permite que as empresas obtenham insights significativos, melhorem a eficiência operacional, impulsionem a inovação e tomem decisões mais informadas.</p>
+            
+            <p>⠀⠀⠀⠀Além disso, o Sigfox é uma solução escalável e flexível, permitindo a expansão e a adaptação de projetos IoT de acordo com as necessidades. Com sua ampla cobertura geográfica e protocolo de baixa potência, o Sigfox é adequado para uma variedade de setores, como agricultura, logística, saúde, cidades inteligentes e muitos outros.</p>
+            
+            <p>⠀⠀⠀⠀No entanto, ao implementar o Sigfox, é importante considerar desafios e considerações como cobertura de rede, limitações de largura de banda, segurança dos dados e integração com sistemas existentes. Uma avaliação cuidadosa e uma implementação adequada podem garantir o sucesso de projetos IoT utilizando o Sigfox.</p>
+            
+            <p>⠀⠀⠀⠀No geral, o Sigfox oferece uma solução confiável e acessível para a conectividade IoT, impulsionando a transformação digital em diversos setores. Com sua abordagem simplificada, o Sigfox permite que empresas e organizações aproveitem os benefícios da IoT, promovendo a eficiência, a inovação e o progresso.</p>
+            
+            <p>⠀⠀⠀⠀Esperamos que este trabalho tenha fornecido uma visão abrangente sobre o Sigfox e suas aplicações. À medida que a IoT continua a crescer e evoluir, o Sigfox se destaca como uma solução valiosa para conectar dispositivos e aproveitar todo o potencial da Internet das Coisas.</p>
+        </div>
+    </div>
+    </body>
+</html>

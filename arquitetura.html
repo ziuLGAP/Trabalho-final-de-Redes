@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title>SigFox</title>
+        <link href="css/style.css" rel="stylesheet"/>
+        <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <i class="bx bx-menu menu-icon"></i>
+                <a href="index.html" class="logo-name">SigFox</a>
+            </div>
+            <div class="sidebar">
+                <div class="logo">
+                    <i class="bx bx-menu menu-icon"></i>
+                    <a href="index.html" class="logo-name">SigFox</a>
+                </div>
+                <div class="sidebar-content">
+                    <ul class="lists">
+                        <li class="list">
+                            <a href="index.html" class="nav-link">
+                                <i class='bx bx-home home-icon'></i>
+                                <span class="link">⠀Página Inicial</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="intro.html" class="nav-link">
+                                <span class="link">1 - Introdução</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="arquitetura.html" class="nav-link">
+                                <span class="link">2 - Arquitetura do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="caracteristicas.html" class="nav-link">
+                                <span class="link">3 - Características técnicas do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="aplicacao.html" class="nav-link">
+                                <span class="link">4 - Aplicações do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="desafios.html" class="nav-link">
+                                <span class="link">5 - Desafios e considerações na implementação do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="conclusao.html" class="nav-link">
+                                <span class="link">6 - Conclusão</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="referencia.html" class="nav-link">
+                                <i class='bx bxs-book'></i>
+                                <span class="link">Referências</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <section class="overlay"></section>
+    <script>
+        const navBar = document.querySelector('nav'),
+        menuBtns = document.querySelectorAll('.menu-icon'),
+        overlay = document.querySelector('.overlay');
+        
+        menuBtns.forEach(menuBtn => {
+            menuBtn.addEventListener('click', () => {
+                navBar.classList.toggle('open');
+            });
+        });
+        overlay.addEventListener('click', () => {
+            navBar.classList.remove('open');
+        });
+    </script>
+    <div class="main">
+        <div class="one">
+            <h2>2. Arquitetura do Sigfox:</h2>
+
+<h3>2.1 Rede Sigfox</h3>
+<p>⠀⠀⠀⠀A rede Sigfox é composta por estações base e antenas estrategicamente distribuídas para garantir uma cobertura de longo alcance. Essa infraestrutura permite que os dispositivos IoT se comuniquem com a rede Sigfox e transmitam seus dados. As estações base atuam como pontos de acesso para os dispositivos, enquanto as antenas são responsáveis pela transmissão dos dados. Vale ressaltar aqui que um dispositivo final não está conectado à alguma estação base específica, o que pode ser observado no cabeçalho de uma mensagem transmitida, que não contém nenhuma identificação de destino.</p>
+        </div>
+        <div class="one">
+            <h3>2.2 Dispositivos conectados e estações base
+            </h3>
+<p>⠀⠀⠀⠀Os dispositivos IoT que utilizam o Sigfox são equipados com um módulo de comunicação
+    Sigfox, que permite a transmissão dos dados pela rede. Esses dispositivos se comunicam com a
+    rede por meio de estações base, que atuam como intermediários entre os dispositivos e a
+    infraestrutura da rede Sigfox. Estas estações recebem os dados dos dispositivos e os
+    encaminham para a rede Sigfox, garantindo a conectividade dos dispositivos IoT à rede.
+     </p>
+     <p>
+        ⠀⠀⠀⠀Com isso, podemos notar que a conexão dos dispositivos não é feita diretamente à rede, o que
+    garante maior segurança e confiabilidade nestes dispositivos.
+     </p>
+     <div class="imagem">
+        <img src="assets/sigfox_arch.png" alt="Estação base">
+        <p>Figura 3 - Estação base e antena Sigfox<br>
+            <a href="https://www.researchgate.net/publication/356039458_Packet_Fragmentation_over_Sigfox_Implementation_and_Performance_Evaluation_of_SCHC_ACK-on-Error" target="_blank">Referência</a>
+    
+        </p>
+    </div>
+        </div>
+        <div class="one">
+            <h3>2.3 Cloud Sigfox</h3>
+<p>⠀⠀⠀⠀A Cloud Sigfox é uma plataforma em nuvem que permite o gerenciamento e processamento
+    dos dados transmitidos pelos dispositivos IoT. Nessa plataforma, os dados podem ser
+    armazenados, analisados e integrados a outros sistemas ou aplicativos. A Cloud Sigfox oferece
+    recursos de armazenamento escalável e ferramentas para a análise dos dados coletados.</p>
+
+<p>⠀⠀⠀⠀A arquitetura do Sigfox foi projetada de forma eficiente e simplificada, visando otimizar o
+    consumo de energia e garantir uma cobertura ampla. Essa abordagem permite que o Sigfox
+    seja implementado em diferentes cenários, desde aplicações de larga escala em áreas urbanas
+    até soluções específicas em ambientes remotos. A rede Sigfox, os dispositivos conectados e a
+    Cloud Sigfox trabalham em conjunto para fornecer uma solução completa de conectividade IoT.</p>
+        </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>SigFox</title>
+        <link href="css/style.css" rel="stylesheet"/>
+        <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <i class="bx bx-menu menu-icon"></i>
+                <a href="index.html" class="logo-name">SigFox</a>
+            </div>
+            <div class="sidebar">
+                <div class="logo">
+                    <i class="bx bx-menu menu-icon"></i>
+                    <a href="index.html" class="logo-name">SigFox</a>
+                </div>
+                <div class="sidebar-content">
+                    <ul class="lists">
+                        <li class="list">
+                            <a href="index.html" class="nav-link">
+                                <i class='bx bx-home home-icon'></i>
+                                <span class="link">⠀Página Inicial</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="intro.html" class="nav-link">
+                                <span class="link">1 - Introdução</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="arquitetura.html" class="nav-link">
+                                <span class="link">2 - Arquitetura do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="caracteristicas.html" class="nav-link">
+                                <span class="link">3 - Características técnicas do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="aplicacao.html" class="nav-link">
+                                <span class="link">4 - Aplicações do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="desafios.html" class="nav-link">
+                                <span class="link">5 - Desafios e considerações na implementação do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="conclusao.html" class="nav-link">
+                                <span class="link">6 - Conclusão</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="referencia.html" class="nav-link">
+                                <i class='bx bxs-book'></i>
+                                <span class="link">Referências</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <section class="overlay"></section>
+    <script>
+        const navBar = document.querySelector('nav'),
+        menuBtns = document.querySelectorAll('.menu-icon'),
+        overlay = document.querySelector('.overlay');
+        
+        menuBtns.forEach(menuBtn => {
+            menuBtn.addEventListener('click', () => {
+                navBar.classList.toggle('open');
+            });
+        });
+        overlay.addEventListener('click', () => {
+            navBar.classList.remove('open');
+        });
+    </script>
+    
+    <div class="main">
+        <div class="two">
+            <h1>SigFox</h1>
+            <p>Universidade Federal do Rio de Janeiro</p>
+            <h3>Redes de Computadores I - Período: 2023.1</h3>
+            <p>Trabalho Final</p>
+        </div>
+        <div class="two">
+            <h2>Resumo</h2>
+            <p>Este site, referente ao trabalho final da disciplina de Redes I e tem como objetivo apresentar uma visão geral do Sigfox, descrevendo sua arquitetura, características técnicas, aplicações e potenciais benefícios para a indústria e sociedade como um todo.</p>
+        </div>
+        <div class="autores">
+            <h2>Autores: </h2>
+            <div class="box">
+                <div class="nome">Lucas Miguel</div>
+                <p>Engenharia da Computação e Informação 7⁰ período</p>
+            </div>
+            <div class="box">
+                <div class="nome">Luiz Guilherme</div>
+                <p>Engenharia da Computação e Informação 5⁰ período</p>
+            </div>
+            <div class="box">
+                <div class="nome">Pedro Eduardo</div>
+                <p>Engenharia da Computação e Informação 5⁰ período</p>
+            </div>
+        </div>
+    </div>
+    
+    </body>
+</html>

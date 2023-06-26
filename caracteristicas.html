@@ -1,0 +1,189 @@
+<html>
+    <head>
+        <title>SigFox</title>
+        <link href="css/style.css" rel="stylesheet"/>
+        <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <i class="bx bx-menu menu-icon"></i>
+                <a href="index.html" class="logo-name">SigFox</a>
+            </div>
+            <div class="sidebar">
+                <div class="logo">
+                    <i class="bx bx-menu menu-icon"></i>
+                    <a href="index.html" class="logo-name">SigFox</a>
+                </div>
+                <div class="sidebar-content">
+                    <ul class="lists">
+                        <li class="list">
+                            <a href="index.html" class="nav-link">
+                                <i class='bx bx-home home-icon'></i>
+                                <span class="link">⠀Página Inicial</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="intro.html" class="nav-link">
+                                <span class="link">1 - Introdução</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="arquitetura.html" class="nav-link">
+                                <span class="link">2 - Arquitetura do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="caracteristicas.html" class="nav-link">
+                                <span class="link">3 - Características técnicas do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="aplicacao.html" class="nav-link">
+                                <span class="link">4 - Aplicações do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="desafios.html" class="nav-link">
+                                <span class="link">5 - Desafios e considerações na implementação do Sigfox</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="conclusao.html" class="nav-link">
+                                <span class="link">6 - Conclusão</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="referencia.html" class="nav-link">
+                                <i class='bx bxs-book'></i>
+                                <span class="link">Referências</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <section class="overlay"></section>
+    <script>
+        const navBar = document.querySelector('nav'),
+        menuBtns = document.querySelectorAll('.menu-icon'),
+        overlay = document.querySelector('.overlay');
+        
+        menuBtns.forEach(menuBtn => {
+            menuBtn.addEventListener('click', () => {
+                navBar.classList.toggle('open');
+            });
+        });
+        overlay.addEventListener('click', () => {
+            navBar.classList.remove('open');
+        });
+    </script>
+    <div class="main">
+        <div class="one">
+            <h2>3. Características técnicas do Sigfox:</h2>
+
+<h3>3.1 Frequência de operação</h3>
+<p>⠀⠀⠀⠀O Sigfox opera em diferentes frequências de rádio, dependendo da região. As frequências mais comuns são 868 MHz na Europa e 902 MHz nos Estados Unidos. Essas frequências foram selecionadas para fornecer uma cobertura adequada e uma boa penetração de sinal, permitindo a comunicação em áreas urbanas e rurais. Para cada país existe uma frequência
+    específica na qual pode ocorrer a transmissão da mensagem. Esta frequência deve estar em
+    um dos sete grupos exibidos abaixo:</p>
+<div class="imagem">
+    <img src="assets/sigfox_freq1.png" alt="Frequências específicas de cada país"> 
+</div>
+<div class="imagem">
+    <img src="assets/sigfox_freq2.png" alt="Configurações para cada grupo">
+    <p>Configurações para cada um destes grupos <br>
+        <a href="https://build.sigfox.com/sigfox-radio-configurations-rc" target="_blank">Referência</a>
+    </p>
+</div>
+<p>⠀⠀⠀⠀Como o uso dessas frequências é restrito em países da Europa, existe um limite de dados que
+    podem ser transmitidos em um dia. A partir desse limite, podemos calcular e chegaremos ao
+    número de 6 mensagens que podem ser transmitidas por hora, o que totalizam 140 mensagens por dia. Além disso, vale destacar que o número de mensagens recebido por um dispositivo
+    final é limitado em 4.</p>
+        </div>
+        <div class="one">
+            <h3>3.2 Tamanho dos pacotes</h3>
+            <p>⠀⠀⠀⠀Como o SigFox foi projetado para ser uma solução que combina o baixo uso energético com um
+                longo alcance, a única forma de alcançar este objetivo é por meio de sinais que utilizem uma
+                largura de banda muito estreita, de apenas 100 Hz. Isso faz com que, em contrapartida, haja
+                uma limitação na quantidade de informação que pode ser transmitida. Com isso em mente, o
+                design dos pacotes foi feito de tal forma que o tamanho máximo do payload (parte dos dados,
+                sem cabeçalho) fosse de 12 bytes.</p>
+            <div class="imagem">
+                <img src="assets/UNB.png" alt="Ultra-Narrow-Band" title="UNB: Ultra-Narrow-Band">
+                <p>Figura 3: Tecnologia do Sigfox baseada na Ultra-Narrow-Band (UNB) <br> 
+                    <a href="https://halberdbastion.com/technology/iot/iot-protocols/sigfox-unb" target="_blank">Referência</a>
+                </p>
+            </div>
+        </div>
+        <div class="one">
+            <h3>3.3 Conteúdo dos pacotes</h3>
+            <p>⠀⠀⠀⠀Além da carga de dados, que pode variar desde coordenadas geográficas (6 bytes) até a
+                temperatura de um sistema (2 bytes), as mensagens enviadas por dispositivos finais também
+                contém dados que os identificam e asseguram a segurança daquela conexão. Além disso,
+                campos para a detecção de erro também estão presentes.</p>
+                <div class="imagem">
+                    <img src="assets/uplink_coms_stack_overview.png" alt="">
+                    <p>Pilha de comunicação do Uplink <br>
+                        <a href="" target="_blank">Referência</a>
+                    </p>
+                </div>
+        </div>
+        <div class="one">
+            <h3>3.4 Confiabilidade dos pacotes</h3>
+            <p>⠀⠀⠀⠀Como foi visto anteriormente, existe um limite de pacotes que podem ser enviados e recebidos
+                em um dia. A partir disso, é fácil concluir que é impossível que todas as mensagens enviadas
+                por dispositivos finais recebam um reconhecimento do seu envio. Nesse contexto, o jeito mais
+                simples de aumentar a garantia do recebimento de um pacote é através da redundância.
+                Portanto, temos que para cada pacote que precisa ser enviado, duas outras retransmissões
+                deste mesmo pacote são feitas em duas frequências distintas, assim como em espaços de
+                tempo sequenciais. A imagem abaixo exemplifica esta dinâmica:</p>
+                <div class="imagem">
+                    <img src="assets/uplink-msg.png" alt="mensagem de uplink">
+                    <p>Mensagem de Uplink <br>
+                        <a href="https://my.element14.com/fulfilling-an-iot-communications-need" target="_blank">Referência</a> 
+                    </p>
+                </div>
+        </div>
+        <div class="one">
+            <h3>3.5 Alcance</h3>
+            <p>⠀⠀⠀⠀Uma das principais vantagens do Sigfox é o seu alcance de longo alcance. Como observado
+                anteriormente, a largura de banda de um sinal é de 100 Hz, o que pode ser categorizada como
+                “Ultra Narrow Band”, sendo assim, as colisões acabam sendo reduzidas, possibilitando um
+                maior alcance. Nesse contexto, a rede Sigfox é projetada para cobrir grandes áreas geográficas,
+                permitindo que os dispositivos IoT se comuniquem a distâncias consideráveis das estações
+                base. Em áreas urbanas, o alcance típico pode variar de 1 a 10 km, enquanto em áreas rurais
+                ou com menos obstáculos, o alcance pode chegar a até 50 km.</p>
+        </div>
+        <div class="one">
+            <h3>3.6 Consumo de energia</h3>
+            <p>⠀⠀⠀⠀O Sigfox é conhecido por seu baixo consumo de energia, o que é fundamental para dispositivos
+                IoT alimentados por baterias ou com restrições energeticas. Os dispositivos Sigfox são
+                projetados para operar de forma eficiente e transmitir apenas pequenas quantidades de dados
+                em intervalos programados, minimizando o consumo de energia. Isso permite que os
+                dispositivos IoT utilizem o Sigfox por longos períodos sem a necessidade frequente de recarga
+                ou substituição de baterias. Segue abaixo um comparaࢢvo da rede Sigfox com outras redes do
+                ࢢpo LPWAN. </p>
+            <div class="imagem">
+                <img src="assets/sigfox_comp.png" alt="Comparativo do Sigfox com outras redes">
+                <p>Comparativo do Sigfox com outras redes <br>
+                    <a href="https://ieeexplore.ieee.org/document/8108182" target="_blank">Referência</a>
+                </p>
+            </div>
+        </div>
+        <div class="one">
+            <h3>3.7 Segurança</h3>
+            <p>⠀⠀⠀⠀A segurança é uma consideração importante no contexto da IoT. O Sigfox adota medidas de
+                segurança para proteger a comunicação entre dispositivos e a rede. Os dados transmitidos pelo
+                Sigfox podem ser criptografados, garantindo a confidencialidade das informações. Além disso, toda mensagem enviada por um dispositivo final contém um código de autenticação, bem
+                como um número de sequência. Ambos associados, procuram evitar a retransmissão de uma
+                mensagem captada por terceiros que pode estar tentando se passar pelo dispositivo.</p>
+            <p>⠀⠀⠀⠀Com suas características técnicas, o Sigfox se destaca como uma solução de conectividade IoT
+                confiável e eficiente. A combinação de frequências de operação adequadas, alcance de longo
+                alcance, baixo consumo de energia e medidas de segurança robustas tornam o Sigfox uma
+                escolha viável para uma ampla gama de aplicações IoT em diferentes setores.</p>
+        </div>
+    </div>
+    </body>
+</html>
